@@ -1,29 +1,52 @@
 package org.example;
 
 public class Student {
-    String studentname;
-    double studentavaerage;
+    private String studentname;
+
+    private String studentlastname;
+    private double studentavaerage;
+
+
+//   init the variables
+    public Student(String studentname, double studentavaerage, String lastname) {
+        this.studentname = studentname;
+        this.studentlastname = lastname;
+
+        if(studentavaerage > 0.0 && studentavaerage < 100.0) {
+            this.studentavaerage = studentavaerage;
+        }
+    }
     public double getStudentavaerage() {
         return studentavaerage;
+    }
+
+    public String getStudentlastname() {
+        return studentlastname;
     }
     public String getStudentname() {
         return studentname;
     }
     public void setStudentavaerage(double studentavaerage) {
-        this.studentavaerage = studentavaerage;
+        if(studentavaerage > 0.0 && studentavaerage < 100.0) {
+            this.studentavaerage = studentavaerage;
+        }
     }
     public void setStudentname(String studentname) {
         this.studentname = studentname;
     }
+
+    public void setStudentlastname(String studentlastname) {
+        this.studentlastname = studentlastname;
+    }
     public String getLetterGrade(double studentaverage) {
-        String studentgrade;
-        if (studentaverage >= 80) {
+        String studentgrade = "";
+        if (studentaverage >= 90) {
             studentgrade = "A";
-        } else if (studentaverage >= 70) {
+        } else if (studentaverage >= 80) {
             studentgrade = "B";
-        } else if (studentaverage >=60) {
+        } else if (studentaverage >=70) {
             studentgrade = "C";
-        } else if (studentaverage >= 50) {
+        } else if (studentaverage >= 60) {
             studentgrade = "D";
         } else {
             studentgrade = "F";
