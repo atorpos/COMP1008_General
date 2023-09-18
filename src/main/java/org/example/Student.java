@@ -12,7 +12,7 @@ public class Student {
         this.studentname = studentname;
         this.studentlastname = lastname;
 
-        if(studentavaerage > 0.0 && studentavaerage < 100.0) {
+        if(studentavaerage >= 0.0 && studentavaerage <= 100.0) {
             this.studentavaerage = studentavaerage;
         }
     }
@@ -38,15 +38,15 @@ public class Student {
     public void setStudentlastname(String studentlastname) {
         this.studentlastname = studentlastname;
     }
-    public String getLetterGrade(double studentaverage) {
+    public String getLetterGrade() {
         String studentgrade = "";
-        if (studentaverage >= 90) {
+        if (studentavaerage >= 90) {
             studentgrade = "A";
-        } else if (studentaverage >= 80) {
+        } else if (studentavaerage >= 80) {
             studentgrade = "B";
-        } else if (studentaverage >=70) {
+        } else if (studentavaerage >=70) {
             studentgrade = "C";
-        } else if (studentaverage >= 60) {
+        } else if (studentavaerage >= 60) {
             studentgrade = "D";
         } else {
             studentgrade = "F";
