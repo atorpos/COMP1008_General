@@ -1,13 +1,14 @@
 package org.example;
 
 public class Student {
+//    usually the variables are private;
     private String studentname;
 
     private String studentlastname;
     private double studentavaerage;
 
 
-//   init the variables
+//   init the variables, for user input as well
     public Student(String studentname, double studentavaerage, String lastname) {
         this.studentname = studentname;
         this.studentlastname = lastname;
@@ -40,13 +41,13 @@ public class Student {
     }
     public String getLetterGrade() {
         String studentgrade = "";
-        if (studentavaerage >= 90) {
+        if (studentavaerage >= 90.0) {
             studentgrade = "A";
-        } else if (studentavaerage >= 80) {
+        } else if (studentavaerage >= 80.0) {
             studentgrade = "B";
-        } else if (studentavaerage >=70) {
+        } else if (studentavaerage >=70.0) {
             studentgrade = "C";
-        } else if (studentavaerage >= 60) {
+        } else if (studentavaerage >= 60.0) {
             studentgrade = "D";
         } else {
             studentgrade = "F";
